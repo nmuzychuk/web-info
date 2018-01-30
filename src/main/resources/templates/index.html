@@ -23,5 +23,30 @@
     </tbody>
 </table>
 
+<script>
+    (function () {
+  var table, row, cell, data;
+
+  table = document.getElementById('table');
+
+  data = [
+    ["Screen width", window.screen.width],
+    ["Screen height", window.screen.height],
+    ["Color depth", window.screen.colorDepth],
+    ["Local date", new Date]
+  ];
+
+  for (var i = 0; i < data.length; i++) {
+    row = table.insertRow(-1);
+
+    for (var j = 0; j < data[i].length; j++) {
+      cell = row.insertCell(j);
+      cell.innerText = data[i][j];
+
+    }
+
+  }
+})();
+</script>
 </body>
 </html>
