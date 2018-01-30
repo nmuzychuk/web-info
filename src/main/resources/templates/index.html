@@ -2,14 +2,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <title>App</title>
+    <title th:text="${title}"></title>
 </head>
 
 <body>
-<p th:text="${greeting}"></p>
+<h2 th:text="${heading}"></h2>
 
-<p th:text="${ip}"></p>
+<table id="table">
+    <thead>
+    <tr>
+        <th th:text="${property}"></th>
+        <th th:text="${value}"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="key : ${info.keySet()}">
+        <td th:text="${key}"></td>
+        <td th:text="${info.get(key)}"></td>
+    </tr>
+    </tbody>
+</table>
 
-<p th:text="${userAgent}"></p>
 </body>
 </html>
