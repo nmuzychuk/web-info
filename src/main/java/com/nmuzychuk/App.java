@@ -11,6 +11,8 @@ import static spark.Spark.*;
 
 public class App {
     public static void main(String[] args) {
+        port(getPort());
+
         get("/", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
             model.put("title", "Web Info");
@@ -33,5 +35,16 @@ public class App {
 
     private static String render(Map<String, Object> model, String templatePath) {
         return new ThymeleafTemplateEngine().render(new ModelAndView(model, templatePath));
+    }
+
+    private static int getPort() {
+        ProcessBuilder processBuilder = new ProcessBuilder();
+        String port = processBuilder.environment().get("PORT");
+
+        if (port != null) {
+            return Integer.parseInt(port);
+        } else {
+            return 4567;
+        }
     }
 }
