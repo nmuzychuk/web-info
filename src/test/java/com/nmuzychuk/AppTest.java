@@ -4,6 +4,8 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
+import static spark.Spark.awaitInitialization;
+
 /**
  * Unit test for simple App.
  */
@@ -29,6 +31,7 @@ public class AppTest
      * Rigourous Test :-)
      */
     public void testApp() {
-        assertTrue(true);
+        App.main(new String[0]);
+        awaitInitialization();
     }
 }
