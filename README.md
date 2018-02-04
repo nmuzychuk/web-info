@@ -5,6 +5,9 @@
 ## Overview
 Displays some web-related information about you.
 
+## Heroku
+http://my-web-info.herokuapp.com
+
 ## Test
 Run JUnit tests
 ```
