@@ -1,5 +1,5 @@
 # Web Info
-[![Build Status](https://travis-ci.org/nmuzychuk/web-info.svg?branch=master)](https://travis-ci.org/nmuzychuk/web-info)
+[![Java CI with Maven](https://github.com/nmuzychuk/web-info/actions/workflows/maven.yml/badge.svg)](https://github.com/nmuzychuk/web-info/actions/workflows/maven.yml)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b2eb83918b9c41589bdab6dbfa83fb2d)](https://www.codacy.com/app/nmuzychuk/web-info)
 
 ## Overview
